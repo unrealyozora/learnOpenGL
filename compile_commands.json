@@ -1,0 +1,7 @@
+﻿[
+  {
+    "directory": "C:/Users/tomma/Dev/learnOpenGl/build/",
+    "command": "\"C:/Program Files/LLVM/bin/clang++.exe\" -x c++ \"C:/Users/tomma/Dev/learnOpenGl/src/test.cpp\" -std=c++14 -Wall -fms-compatibility-version=19.10 -Wmicrosoft -Wno-invalid-token-paste -Wno-unknown-pragmas -Wno-unused-value -fsyntax-only \"-D_MT\" \"-D_DLL\" \"-DWIN32\" \"-D_WINDOWS\" \"-DCMAKE_INTDIR=/\"Debug/\"\" \"-D_DEBUG_FUNCTIONAL_MACHINERY\" -isystem\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/include\" -isystem\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/atlmfc/include\" -isystem\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/VS/include\" -isystem\"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/ucrt\" -isystem\"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um\" -isystem\"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared\" -isystem\"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/winrt\" -isystem\"C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/cppwinrt\" -I\"C:/Users/tomma/Dev/learnOpenGl/../Libraries/OpenGL/include\" -I\"C:/Users/tomma/Dev/learnOpenGl/../Libraries/OpenGL/GLAD/include\"",
+    "file": "C:/Users/tomma/Dev/learnOpenGl/src/test.cpp"
+  }
+]
