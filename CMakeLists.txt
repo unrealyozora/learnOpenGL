@@ -8,14 +8,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(../Libraries/OpenGL/include/)
 include_directories(../Libraries/OpenGL/GLAD/include/)
 
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp src/*.c)
+#file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp src/*.c)
 
 link_directories(${CMAKE_SOURCE_DIR}/../Libraries/OpenGL)
 
 set_source_files_properties(src/glad.c PROPERTIES LANGUAGE C)
-add_executable(main ${SOURCES})
+set(GLAD_SRC src/glad.c)
 
-target_link_libraries(main glfw3)
-message(STATUS "Sorgenti inclusi: ${SOURCES}")
+function(add_lesson_executable name source)
+    add_executable(${name} ${source} ${GLAD_SRC})
+    target_link_libraries(${name} glfw3)
+endfunction()
 
-
+add_lesson_executable(lesson1 src/lesson1/lesson1.cpp)
+add_lesson_executable(lesson1-ex1 src/lesson1/lesson1-ex1.cpp)
+add_lesson_executable(lesson1-ex2 src/lesson1/lesson1-ex2.cpp)
+add_lesson_executable(lesson1-ex3 src/lesson1/lesson1-ex3.cpp)
