@@ -4,7 +4,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include <thread>
 // clang-format off
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
