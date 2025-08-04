@@ -1,4 +1,4 @@
--ex2// clang-format off
+// clang-format off
 #include <cmath>
 #include <cstddef>
 #include <cstdlib>
@@ -175,9 +175,9 @@ int main() {
   glm::mat4 view;
 
   glm::mat4 myLookAt;
-  myLookAt=
+  myLookAt =
 
-  while (!glfwWindowShouldClose(window)) {
+      while (!glfwWindowShouldClose(window)) {
     float currentFrame = glfwGetTime();
     deltaTime = currentFrame - lastFrame;
     lastFrame = currentFrame;
