@@ -23,3 +23,7 @@ function(add_lesson_executable name source)
 endfunction()
 
 add_lesson_executable(lesson1 lesson1.cpp)
+add_lesson_executable(lesson2 lesson2.cpp)
+add_lesson_executable(lesson2-ex1 lesson2-ex1.cpp)
+add_lesson_executable(lesson2-ex2 lesson2-ex2.cpp)
+add_lesson_executable(lesson2-ex4 lesson2-ex4.cpp)
