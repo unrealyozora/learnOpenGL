@@ -139,7 +139,8 @@ int main() {
 
   std::filesystem::current_path("..\\..\\");
   unsigned int diffuseMap = loadTexture("assets/container2.png");
-  unsigned int specularMap = loadTexture("assets/container2_specular.jpg");
+  unsigned int specularMap =
+      loadTexture("assets/lighting_maps_specular_color.png");
 
   lightingShader.use();
   lightingShader.setInt("material.diffuse", 0);

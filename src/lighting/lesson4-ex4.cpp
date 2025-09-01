@@ -104,9 +104,10 @@ int main() {
   glEnable(GL_DEPTH_TEST);
 
   std::filesystem::current_path("..\\..\\");
-  Shader lightingShader("shader/lesson4/object.vs", "shader/lesson4/object.fs");
-  Shader lightCubeShader("shader/lesson4/lightCube.vs",
-                         "shader/lesson4/lightCube.fs");
+  Shader lightingShader("shader/lesson4-ex4/object.vs",
+                        "shader/lesson4-ex4/object.fs");
+  Shader lightCubeShader("shader/lesson4-ex4/lightCube.vs",
+                         "shader/lesson4-ex4/lightCube.fs");
 
   // Cube's VAO and VBO
   unsigned int VBO, cubeVAO;
@@ -140,10 +141,12 @@ int main() {
   std::filesystem::current_path("..\\..\\");
   unsigned int diffuseMap = loadTexture("assets/container2.png");
   unsigned int specularMap = loadTexture("assets/container2_specular.jpg");
+  unsigned int emissionMap = loadTexture("assets/matrix.jpg");
 
   lightingShader.use();
   lightingShader.setInt("material.diffuse", 0);
   lightingShader.setInt("material.specular", 1);
+  lightingShader.setInt("material.emissive", 2);
 
   glm::mat4 view;
 
@@ -180,6 +183,9 @@ int main() {
 
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, specularMap);
+
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, emissionMap);
 
     glBindVertexArray(cubeVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);

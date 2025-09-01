@@ -104,9 +104,10 @@ int main() {
   glEnable(GL_DEPTH_TEST);
 
   std::filesystem::current_path("..\\..\\");
-  Shader lightingShader("shader/lesson4/object.vs", "shader/lesson4/object.fs");
-  Shader lightCubeShader("shader/lesson4/lightCube.vs",
-                         "shader/lesson4/lightCube.fs");
+  Shader lightingShader("shader/lesson4-ex2/object.vs",
+                        "shader/lesson4-ex2/object.fs");
+  Shader lightCubeShader("shader/lesson4-ex2/lightCube.vs",
+                         "shader/lesson4-ex2/lightCube.fs");
 
   // Cube's VAO and VBO
   unsigned int VBO, cubeVAO;
